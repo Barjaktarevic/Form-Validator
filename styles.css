@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --text-color: #faebd7;
+    --background-color: #232323;
+    --success-color: #90ee90;
+    --failure-color: #b22222;
+}
+
+body {
+    font-family: 'Major Mono Display', monospace;
+    letter-spacing: 2px;
+    background-image: url(/space.png);
+    background-repeat: round;
+}
+
+.title {
+    text-align: center;
+    font-size: 5vw;
+    color: var(--text-color);
+}
+
+.container {
+    text-align: left;
+    margin-top: 5vmin;
+    box-shadow: 1.5vmin 1vmin 5vmin 1.5vmin;
+    padding: 1vmin 0;
+}
+
+.container input, .container label, .container button {
+    margin: 0 5vmin;
+    margin-top: 1.5vmin;
+    margin-bottom: 1.5vmin;
+    width: 60vmin;
+    padding: 0.75vmin;
+    text-align: left;
+    font-family: inherit;
+}
+
+.container button {
+    margin-left: 15vmin;
+}
+
+.container label {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 2.6vmin;
+}
+
+.message {
+    color: var(--text-color);
+    padding: 1vmin;
+    width: 60vmin;
+    font-weight: bold;
+
+}
+
+.message-container {
+    background-color: var(--background-color);
+    width: 60vmin;
+    margin-left: 5vmin;
+    opacity: 85%;
+    text-align: center;
+}
+
+.submit-btn {
+    width: auto;
+    color: var(--text-color);
+    scale: 1.5;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.submit-btn:hover {
+    filter: brightness(125%);
+    cursor: pointer;
+}
+
+.input-field {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    box-shadow: 0.35vmin 0.35vmin 0.5vmin 0.25vmin var(--text-color);
+    font-size: 2.6vmin;
+    opacity: 0.75;
+    transition: 300ms ease;
+}
+
+.input-field:valid {
+    border: 3px solid var(--success-color);
+}
+
+.input-field:invalid {
+    border: 3px solid var(--failure-color);
+}
+
+form {
+    padding: 2vmin 0;
+}
+
+@keyframes success-failure-animation {
+    0% {
+        filter: brightness(100%)
+    }
+    100% {
+        filter: brightness(50%)
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    body {
+        background: linear-gradient(70deg, darkslateblue 0%, rgb(8, 8, 8) 100%);
+    }
+    .container {
+        margin-top: 10vmin;
+    }
+    .container * {
+        font-size: 4.5vmin;
+        text-align: center;
+    }
+    .submit-btn {
+        width: 95%;
+        text-align: center;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-25%);
+    }
+    .message-container {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+
+    .title {
+        font-size: 10vmin;
+    }
+}

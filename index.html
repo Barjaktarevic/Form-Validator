@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>Form Validator</title>
+</head>
+<body>
+
+    <main>
+        <h1 class="title">Form Validator</h1>
+        <div class="container">
+        <form class="validation-form">
+            <!-- Name input -->
+            <label for="name">Full name</label> <br>
+            <input type="text" id="name" placeholder="Enter your full name" class="input-field" 
+            required minlength="3" maxlength="30" name="name"/>  <br>
+            <!-- Phone input -->
+            <label for="phone">Phone number</label> <br>
+            <input type="tel" id="phone" placeholder="Enter your phone number" class="input-field" 
+            required pattern="^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$" title="use a valid phone number format" name="phone"/>  <br>
+            <!-- Email address -->
+            <label for="email">Email address</label> <br>
+            <input type="email" id="email" placeholder="Enter your email" class="input-field" 
+            required pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b" name="email"/>  <br>
+            <!-- Website -->
+            <label for="website">Website</label> <br>
+            <input type="url" id="website" placeholder="Paste your website url" class="input-field" 
+            required name="website"/>  <br>
+            <!-- Password -->
+            <label for="password1">Password</label> <br>
+            <input type="password"  id="password1" placeholder="Enter a password" class="input-field password1" 
+            required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character, 1 number" name="password1El"/>  <br>
+            <!-- Confirm password -->
+            <label for="password2">Confirm password</label> <br>
+            <input type="password"  id="password2" placeholder="Confirm your password" class="input-field password2" 
+            required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 lowercase character, 1 uppercase character, 1 number" name="password2El"/>  <br>
+
+            <button class="submit-btn">Register</button>
+        </form>
+        <div class="message-container">
+            <h3 class="message">Don't hesitate!</h3>
+        </div>
+    </div>
+    </main>
+    
+</body>
+</html>
