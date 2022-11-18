@@ -16,7 +16,7 @@
 body {
     font-family: 'Major Mono Display', monospace;
     letter-spacing: 2px;
-    background-image: url(space.png);
+    background-image: url('space.png');
     background-repeat: round;
 }
 
